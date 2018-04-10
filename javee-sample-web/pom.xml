@@ -14,9 +14,14 @@
 
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>gr.giliopoulos</groupId>
+            <artifactId>javaee-sample-services</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

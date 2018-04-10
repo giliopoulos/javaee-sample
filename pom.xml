@@ -12,6 +12,7 @@
     <modules>
         <module>javee-sample-web</module>
         <module>javaee-sample-domain</module>
+        <module>javaee-sample-services</module>
     </modules>
 
     <properties>
