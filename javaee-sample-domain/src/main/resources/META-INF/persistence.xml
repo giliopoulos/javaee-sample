@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
 
-    <persistence-unit name="employeesPersistenceUnit">
+    <persistence-unit name="employeesPersistenceUnit" transaction-type="JTA">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <jta-data-source>java:jboss/datasources/mysql</jta-data-source>
+        <jta-data-source>java:jboss/datasources/EmployeesDS</jta-data-source>
         <properties>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
