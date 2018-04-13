@@ -15,6 +15,7 @@ public class Employee {
     private Long id;
 
     @Column(name = "birth_date")
+    @Temporal(TemporalType.DATE)
     private Date birthDate;
 
     @Column(name = "first_name")
@@ -23,11 +24,12 @@ public class Employee {
     @Column(name = "last_name")
     private String lastName;
 
-/*    @Enumerated(EnumType.STRING)
-    @Type(type = "org.hibernate.type.EnumType")
-    private Gender gender;*/
+    @Enumerated(EnumType.STRING)
+    @Column(columnDefinition = "ENUM('M', 'F')")
+    private Gender gender;
 
     @Column(name = "hire_date")
+    @Temporal(TemporalType.DATE)
     private Date hireDate;
 
     public Long getId() {
@@ -62,13 +64,13 @@ public class Employee {
         this.lastName = lastName;
     }
 
- /*   public Gender getGender() {
+    public Gender getGender() {
         return gender;
     }
 
     public void setGender(Gender gender) {
         this.gender = gender;
-    }*/
+    }
 
     public Date getHireDate() {
         return hireDate;
