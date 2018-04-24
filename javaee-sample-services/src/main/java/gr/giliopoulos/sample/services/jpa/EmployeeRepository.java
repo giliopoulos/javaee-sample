@@ -34,7 +34,7 @@ public class EmployeeRepository implements GenericRepository {
 
     @Override
     public Object findById(Object id) {
-        return null;
+       return em.find(Employee.class, id);
     }
 
     @Override
