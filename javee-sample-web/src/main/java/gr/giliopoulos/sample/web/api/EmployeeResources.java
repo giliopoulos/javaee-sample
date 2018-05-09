@@ -30,6 +30,6 @@ public class EmployeeResources {
     @Path("{id}")
     public Employee getById(@PathParam("id") Long id){
         System.out.println("called");
-        return (Employee)repository.findById(id);
+        return repository.findById(id);
     }
 }

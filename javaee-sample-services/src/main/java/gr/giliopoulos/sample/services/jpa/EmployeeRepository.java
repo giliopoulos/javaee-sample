@@ -12,33 +12,34 @@ import java.util.List;
 
 @Stateless
 @LocalBean
-public class EmployeeRepository implements GenericRepository {
+public class EmployeeRepository implements GenericRepository<Employee, Long> {
 
     @PersistenceContext(unitName = "employeesPersistenceUnit")
     private EntityManager em;
 
     @Override
-    public Object create(Object entity) {
-        return null;
+    public Employee create(Employee employee) {
+        em.persist(employee);
+        return employee;
     }
 
     @Override
-    public Object modify(Object entity) {
-        return null;
+    public Employee modify(Employee employee) {
+        return em.merge(employee);
     }
 
     @Override
-    public void delete(Object entity) {
-
+    public void delete(Employee employee) {
+        em.remove(employee);
     }
 
     @Override
-    public Object findById(Object id) {
+    public Employee findById(Long id) {
        return em.find(Employee.class, id);
     }
 
     @Override
-    public List findAll() {
+    public List<Employee> findAll() {
         TypedQuery<Employee> findAllUsersQuery = em.createNamedQuery("gr.giliopoulos.sample.domain.Employee.findAllEmployees", Employee.class);
         findAllUsersQuery.setMaxResults(100);
         List<Employee> resultList = ((TypedQuery) findAllUsersQuery).getResultList();
