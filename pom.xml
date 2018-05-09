@@ -20,7 +20,11 @@
 
         <!--java libs versions-->
         <javaee-api-version>7.0</javaee-api-version>
+
+
         <junit-version>4.12</junit-version>
+        <rest-assured-version>2.9.0</rest-assured-version>
+
         <java-version>1.8</java-version>
 
         <!--plugin versions-->
@@ -40,6 +44,13 @@
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${junit-version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.jayway.restassured</groupId>
+                <artifactId>rest-assured</artifactId>
+                <version>${rest-assured-version}</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
