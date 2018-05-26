@@ -4,7 +4,7 @@ import gr.giliopoulos.sample.test.categories.Rest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 
-import static com.jayway.restassured.RestAssured.given;
+import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
 

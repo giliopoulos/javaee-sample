@@ -3,7 +3,6 @@ package gr.giliopoulos.sample.web.api;
 import gr.giliopoulos.sample.domain.Employee;
 import gr.giliopoulos.sample.services.jpa.EmployeeRepository;
 
-import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
